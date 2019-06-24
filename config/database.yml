@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: secret_chat_dev
+
+test:
+  <<: *default
+  database: secret_chat_test
+
+production:
+  <<: *default
+  database: secret_chat_prod
+#  username: secret_chat
+#  password: <%= ENV['secret_chat'] %>
