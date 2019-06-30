@@ -1,7 +1,7 @@
 class V1::Auth < Grape::API
   namespace :auth do
 
-    desc 'User Sign up'
+    desc 'Registration new user (signup)'
     params do
       requires :user, type: Hash do
         requires :email
@@ -16,7 +16,7 @@ class V1::Auth < Grape::API
 
 
 
-    desc 'Simple authorization'
+    desc 'Simple authorization (signin)'
     params do
       requires :user, type: Hash do
         requires :email, allow_blank: false

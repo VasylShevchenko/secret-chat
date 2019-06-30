@@ -6,13 +6,13 @@ class V1::User < Grape::API
 
   resource :users do
 
-    desc 'Delete User by Email'
+    desc 'Returns a list of existing users'
     params do
       requires :token, type: String
     end
     get '', jbuilder: 'users/index' do
       @users = User.all
-      show_error!('Record not found', 404) if @users.blank?
+      show_error!('records not found', 404) if @users.blank?
       status :ok
     end
 
@@ -21,14 +21,14 @@ class V1::User < Grape::API
     desc 'Delete User by ID'
     params do
       requires :token, type: String
-      requires :id, type: String
+      requires :id,    type: Integer
     end
     delete ':id' do
       @user = User.find_by(id: params[:id])
       show_error!('Record not found', 404) if @user.blank?
       @user.destroy!
       status :ok
-    end
+ra    end
 
 
     desc 'Get User by ID'
