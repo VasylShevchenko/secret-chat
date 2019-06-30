@@ -22,6 +22,11 @@ class User < ApplicationRecord
 
   has_one :auth_token, dependent: :destroy
 
+  has_many :room, dependent: :destroy
+
+  has_many :user_rooms, dependent: :destroy
+  has_many :rooms, through: :user_rooms
+
   after_create :create_auth_token
 
 
