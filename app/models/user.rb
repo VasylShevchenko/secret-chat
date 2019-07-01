@@ -29,6 +29,9 @@ class User < ApplicationRecord
 
   after_create :create_auth_token
 
+  has_many :messages, dependent: :destroy
+
+
 
   def user_token
     auth_token.token if defined?(auth_token)
