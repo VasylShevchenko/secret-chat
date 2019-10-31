@@ -38,7 +38,7 @@ gem 'grape-swagger', '~> 0.32.1'
 gem 'grape-swagger-ui', '~> 2.2', '>= 2.2.8'
 gem 'rack-cors', '~> 1.0', '>= 1.0.3'
 
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 gem 'interactor', '~> 3.1', '>= 3.1.1'
 gem 'pundit', '~> 2.0', '>= 2.0.1'
 
