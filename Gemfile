@@ -36,7 +36,7 @@ gem 'grape-jbuilder', '~> 0.2.0'
 gem 'hashie', '~> 3.6'
 gem 'grape-swagger', '~> 0.32.1'
 gem 'grape-swagger-ui', '~> 2.2', '>= 2.2.8'
-gem 'rack-cors', '~> 1.0', '>= 1.0.3'
+gem 'rack-cors', '~> 1.0'
 
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'interactor', '~> 3.1', '>= 3.1.1'
